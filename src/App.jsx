@@ -2,7 +2,7 @@ import { useState , useRef, useEffect } from "react";
 import {RecoilRoot , atom , useRecoilValue , useSetRecoilState} from 'recoil';
 
 const userAtom = atom({
-  default : [ 
+  default : JSON.parse(localStorage.getItem("friendsArray")) || [ 
     { name: 'ankit ',
       amount: '50',
       //finalIncomming: true ,
@@ -23,7 +23,7 @@ const userAtom = atom({
 });
 
 const reasonAtom = atom({
-  default : [{
+  default :   JSON.parse(localStorage.getItem("userReasons")) || [{
     userId : 1781357174088 ,
     reasons : [{r:'shuttle', a:1000 , i : true}, {r:'milk', a:50 , i : false}]
   },{
@@ -77,6 +77,14 @@ function Render(){
 
   // for the final incomming out going calculations
   const t = universalTotal();
+
+  useEffect(() => {
+    localStorage.setItem("friendsArray", JSON.stringify(user));
+  }, [user]);
+
+  useEffect(() => {
+    localStorage.setItem("userReasons", JSON.stringify(userReason));
+  }, [userReason]);
 
   return (
     <div className="flex flex-col justify-center items-center">
@@ -232,7 +240,7 @@ function Render(){
           <div>Made By: Ram Bhagat Soni</div>
           <div>Frontend Project in React.js</div>
           <div>For styling : Tailwind-css</div>
-          <div>On : 11-6-2026 to 16-6-2026</div>
+          <div>On : June-2026 </div>
         </div>
       </div>
     </div>
