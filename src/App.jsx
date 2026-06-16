@@ -3,7 +3,7 @@ import {RecoilRoot , atom , useRecoilValue , useSetRecoilState} from 'recoil';
 
 const userAtom = atom({
   default : JSON.parse(localStorage.getItem("friendsArray")) || [ 
-    { name: 'ankit ',
+    { name: 'ankit',
       amount: '50',
       //finalIncomming: true ,
       id : 1781357174088
@@ -100,12 +100,12 @@ function Render(){
       <form className="flex flex-col gap-[3px] justify-center items-center">
         <div>
           <input type="radio" id="outgoing" name="radio" value="false" ref={radioIncomming} className="cursor-pointer"/>
-          <label className="font-bold ml-[5px]">Outgoing</label>
+          <label className="font-bold ml-[5px]">Lia (I will receive)</label>
         </div>
 
         <div>
           <input type="radio" id="incomming" name="radio" value="true" ref={radioIncomming} className="cursor-pointer"/>
-          <label className="font-bold ml-[5px]">Incomming</label>
+          <label className="font-bold ml-[5px]">Dia (I gave)</label>
         </div>
       </form>
 
@@ -117,9 +117,9 @@ function Render(){
 
       <div className="border-5 rounded-[50px] p-5 m-4 bg-yellow-300 min-w-[300px] mx-[20px]">
         <div className="border-3  rounded-[20px] my-[5px] py-[10px] flex flex-col  gap-[-10px] items-center justify-center bg-white">
-          <div><strong>Total Incomming Money:</strong> ₹{Math.abs(t.totalPositive)}</div>
+          <div><strong>Total Incomming (Aane wale): </strong> ₹{Math.abs(t.totalPositive)}</div>
           <br />
-          <div><strong>Total Outgoing Money :</strong> ₹{Math.abs(t.totalNegative)}</div>
+          <div><strong>Total Outgoing (Jane wale): </strong> ₹{Math.abs(t.totalNegative)}</div>
         </div>
         
         <span className="flex flex-col items-center justify-center font-bold text-xl">Users</span>
@@ -213,10 +213,10 @@ function Render(){
                     <form>
 
                       <input type="radio" id="outgoing" name="radio" value="false" ref={radioMoreIncomming} className="cursor-pointer "/>
-                      <label className="font-bold ml-[5px]">Outgoing</label>
+                      <label className="font-bold ml-[5px]">Lene Hai (I will receive)</label>
                       <br />
                       <input type="radio" id="incomming" name="radio" value="true" ref={radioMoreIncomming} className="cursor-pointer "/>
-                      <label className="font-bold ml-[5px]">Incomming</label>
+                      <label className="font-bold ml-[5px]">Dia (I gave)</label>
                       <br/>
 
                     </form>
