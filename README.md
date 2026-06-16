@@ -1,16 +1,12 @@
-# React + Vite
+THIS IS MY MY FIRST PROJECT IN REACT 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I have used React 18 th version insted of 19 th version because it does not support many of things i learned, but the the older version works fine for me.
 
-Currently, two official plugins are available:
+For styling i have used Tailwind Css which i have recently learned !!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+I have tried my best to make it as pixel perfect as possible by still you can find some loop holes !
 
-## React Compiler
+This project does not support any server or any type of data base to store your data although it uses you local storage to store the data so make sure you do not clear the data for the browser in which you are using this app in !!
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ALL RIGHTS RESERVED 
+NO SORT OF AI IS USED IN MAKING THIS PROJECT !!
