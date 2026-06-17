@@ -100,7 +100,7 @@ function Render(){
       <form className="flex flex-col gap-[3px] justify-center items-center">
         <div>
           <input type="radio" id="outgoing" name="radio" value="false" ref={radioIncomming} className="cursor-pointer"/>
-          <label className="font-bold ml-[5px]">Lia (I will receive)</label>
+          <label className="font-bold ml-[5px]">Lia (I have taken)</label>
         </div>
 
         <div>
@@ -110,7 +110,13 @@ function Render(){
       </form>
 
       <button onClick={()=>{
+
         setNewHisab()
+        nameInput.current.value = "";
+        amountInput.current.value = "";
+        moneyReason.current.value = "";
+        radioIncomming.current.checked = false;
+
       }} className="border rounded-[30px] py-[5px] px-[40px] mt-[10px] cursor-pointer font-bold hover:bg-green-400 bg-green-300 border-3">
         Add
       </button>
@@ -213,7 +219,7 @@ function Render(){
                     <form>
 
                       <input type="radio" id="outgoing" name="radio" value="false" ref={radioMoreIncomming} className="cursor-pointer "/>
-                      <label className="font-bold ml-[5px]">Lene Hai (I will receive)</label>
+                      <label className="font-bold ml-[5px]">Lai (I have taken)</label>
                       <br />
                       <input type="radio" id="incomming" name="radio" value="true" ref={radioMoreIncomming} className="cursor-pointer "/>
                       <label className="font-bold ml-[5px]">Dia (I gave)</label>
@@ -275,7 +281,9 @@ function Render(){
         id : time
       }
       ])
-    } 
+
+      alert('SAVED');
+    }  
   }
 
   function searchUserFromButton(prop){
